@@ -389,6 +389,121 @@
 
 
   
+    <article id="post-git使用方法" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+  
+  
+    <h1 itemprop="name">
+	
+	  <a class="article-title" href="/2019/11/22/git%E4%BD%BF%E7%94%A8%E6%96%B9%E6%B3%95/" target="_blank">git使用方法</a>
+  
+    </h1>
+  
+
+
+  
+  
+<a href="/2019/11/22/git%E4%BD%BF%E7%94%A8%E6%96%B9%E6%B3%95/" class="archive-article-date">
+        <time datetime="2019-11-21T17:46:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-11-22</time>
+</a>
+
+  
+  
+    
+
+  
+  </header>
+  
+  <div class="article-entry" itemprop="articleBody">
+    
+    <h2 id="git初始化仓库"><a href="#git初始化仓库" class="headerlink" title="git初始化仓库"></a>git初始化仓库</h2><p><strong>git init</strong></p>
+<h2 id="克隆一个仓库下来"><a href="#克隆一个仓库下来" class="headerlink" title="克隆一个仓库下来"></a>克隆一个仓库下来</h2><p><strong>git clone repo(仓库地址)</strong></p>
+<h2 id="git提交到暂存区"><a href="#git提交到暂存区" class="headerlink" title="git提交到暂存区"></a>git提交到暂存区</h2><p><strong>git add 文件名</strong><br><strong>git add .</strong> ——提交当前目录的所有文件</p>
+<h2 id="提交到本地仓库"><a href="#提交到本地仓库" class="headerlink" title="提交到本地仓库"></a>提交到本地仓库</h2><p><strong>git commit -m “提交文件信息”</strong><br><strong>git commit -a -m “提交文件信息”</strong>——直接越过暂存区</p>
+<h2 id="先与远程建立联系"><a href="#先与远程建立联系" class="headerlink" title="先与远程建立联系"></a>先与远程建立联系</h2><p><strong>git remote add origin 远程仓库地址</strong><br><strong>git push -u origin master</strong>——<strong>以后只输入git push</strong></p>
+<h2 id="新建一个分支"><a href="#新建一个分支" class="headerlink" title="新建一个分支"></a>新建一个分支</h2><p><strong>git branch  cyd(分区名)</strong></p>
+<h2 id="查看分支情况"><a href="#查看分支情况" class="headerlink" title="查看分支情况"></a>查看分支情况</h2><p><strong>git branch</strong></p>
+<h2 id="切换分区"><a href="#切换分区" class="headerlink" title="切换分区"></a>切换分区</h2><p><strong>git checkout cyd(分区名)</strong>  </p>
+<h2 id="新建并切换分支"><a href="#新建并切换分支" class="headerlink" title="新建并切换分支"></a>新建并切换分支</h2><p><strong>git checkout -b cyd(分区名)</strong></p>
+<h2 id="删除另一个空分区"><a href="#删除另一个空分区" class="headerlink" title="删除另一个空分区"></a>删除另一个空分区</h2><p><strong>git branch -d cyd(分区名)</strong></p>
+<h2 id="强制删除另一个有文件分区"><a href="#强制删除另一个有文件分区" class="headerlink" title="强制删除另一个有文件分区"></a>强制删除另一个有文件分区</h2><p><strong>git branch -D cyd(分区名)</strong></p>
+<h2 id="合并另一个分区"><a href="#合并另一个分区" class="headerlink" title="合并另一个分区"></a>合并另一个分区</h2><p><strong>git merge cyd(分区名)</strong></p>
+<h2 id="分区提交到远程仓库"><a href="#分区提交到远程仓库" class="headerlink" title="分区提交到远程仓库"></a>分区提交到远程仓库</h2><p><strong>git push origin cyd(分区名)</strong>——先切换到分区操作界面<br><strong>git push</strong></p>
+<h2 id="删除远程仓库分区"><a href="#删除远程仓库分区" class="headerlink" title="删除远程仓库分区"></a>删除远程仓库分区</h2><p><strong>git push origin :cyd(分区名)</strong></p>
+<h2 id="修改远程仓库分区名"><a href="#修改远程仓库分区名" class="headerlink" title="修改远程仓库分区名"></a>修改远程仓库分区名</h2><p><strong>git push origin cyd(分区名):lml(新分区名)</strong></p>
+<h2 id="查看git日志"><a href="#查看git日志" class="headerlink" title="查看git日志"></a>查看git日志</h2><p><strong>git log</strong></p>
+<h2 id="查看git日志一行的展示"><a href="#查看git日志一行的展示" class="headerlink" title="查看git日志一行的展示"></a>查看git日志一行的展示</h2><p><strong>git log –oneline</strong></p>
+<h2 id="图形化查看git日志"><a href="#图形化查看git日志" class="headerlink" title="图形化查看git日志"></a>图形化查看git日志</h2><p><strong>先进入git的家目录:~/.gitconfig</strong><br><strong>在[alias]别名下输入</strong><br><strong>dog = log –all –decorate –oneline –graph</strong></p>
+<h2 id="回退当前分支上一次提交"><a href="#回退当前分支上一次提交" class="headerlink" title="回退当前分支上一次提交"></a>回退当前分支上一次提交</h2><p><strong>git reset master^</strong></p>
+<h2 id="回退多次"><a href="#回退多次" class="headerlink" title="回退多次"></a>回退多次</h2><p><strong>git reset master~5(回退多次)</strong></p>
+<h2 id="回退某一次状态版本"><a href="#回退某一次状态版本" class="headerlink" title="回退某一次状态版本"></a>回退某一次状态版本</h2><p><strong>git reset id()</strong></p>
+<h2 id="回退文件到站存区"><a href="#回退文件到站存区" class="headerlink" title="回退文件到站存区"></a>回退文件到站存区</h2><p><strong>git reset –soft id()</strong></p>
+<h2 id="回退文件并在删除工作目录文件"><a href="#回退文件并在删除工作目录文件" class="headerlink" title="回退文件并在删除工作目录文件"></a>回退文件并在删除工作目录文件</h2><p><strong>git reset –hard id()</strong></p>
+    
+    <a class="article-more-a" href="/2019/11/22/git%E4%BD%BF%E7%94%A8%E6%96%B9%E6%B3%95/#more">more >></a>
+    
+    
+
+    
+
+    
+
+  </div>
+  <div class="article-info article-info-index">
+    
+    <div class="article-pop-out tagcloud">
+      <i class="icon-tuding"></i>
+      <a class="article-tag-list-link color3">置顶</a>
+    </div>
+    
+    
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" target="_blank" rel="noopener" class="js-tag article-tag-list-link color4">git</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+    
+
+    
+    <p class="article-more-link">
+      <a class="article-more-a" href="/2019/11/22/git%E4%BD%BF%E7%94%A8%E6%96%B9%E6%B3%95/">展开全文 >></a>
+    </p>
+    
+
+    
+    <div class="clearfix"></div>
+  </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" target="_blank" rel="noopener" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
   
 
 
@@ -516,6 +631,10 @@
             <input type="checkbox" q-on="click:toggleTag(e)" q-attr="checked:showTags">
           </label>
           <ul class="article-tag-list" q-show="showTags">
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" target="_blank" rel="noopener" class="js-tag color4">git</a>
+              </li>
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" target="_blank" rel="noopener" class="js-tag color2">ubuntu</a>
